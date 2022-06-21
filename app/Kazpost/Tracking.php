@@ -33,7 +33,7 @@ abstract class Tracking implements ITracking {
     /**
      * get track data from api
      * @param type $track_number requested track number 
-     * @return array formatted tracking api response, keys: send_time, status, error
+     * @return array formatted tracking api response, keys: type, send_time, status, error
      */
     public abstract function get_track(string $track_number = ''): array;
     
@@ -58,7 +58,7 @@ abstract class Tracking implements ITracking {
     /**
      * translate response data to uniform format
      * @param string $response api response json to format
-     * @return array formatted response, keys: send_time, status, error
+     * @return array formatted response, keys: type, send_time, status, error
      */
     protected function format_response(array $response): array {
         return [];

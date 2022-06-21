@@ -18,7 +18,7 @@ function send_form() {
     })
             .then(response => response.json())
             .then(data => {
-                console.log('Ответ: ', data);
+                console.log(data);
                 if (
                         data.error
                         && (data.error !== '')
@@ -30,10 +30,12 @@ function send_form() {
                         && (data.data.error !== '')
                         ) {
                     error_box.classList.remove('d-none');
-                    error_box.innerHTML = data.data.error;
+                    error_box.innerHTML = 'Ошибка: ' + data.data.error;
                 } else {
                     result_box.classList.remove('d-none');
-                    result_box.innerHTML = 'Дата: ' + data.data.send_time + '<br>Статус: ' + data.data.status;
+                    result_box.innerHTML = 'Дата: ' + data.data.send_time
+                            + '<br>Статус: ' + data.data.status
+                            + '<br>Тип: ' + data.data.type;
                 }
             })
             .catch((error) => {

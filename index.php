@@ -2,7 +2,7 @@
 
 ini_set('display_errors', '1');
 error_reporting(E_ALL);
-use Kazpost\Tracking;
+/*use Kazpost\Tracking;
 
 function class_loader($classname) {
     $path = str_replace('\\', DIRECTORY_SEPARATOR, $classname);
@@ -31,7 +31,7 @@ if ($answer['error'] !== '') {
 }
 $tracking = Tracking::build(API_NAME);
 $answer['data'] = $tracking->get_track($data['track_number']);
-echo'<pre>';var_dump($answer);echo'</pre>';
+echo'<pre>';var_dump($answer);echo'</pre>';*/
 //die();
 
 include_once 'app/views/v_index.php';
