@@ -72,7 +72,7 @@ class v2 extends Tracking {
             $response_formatted = [
                 'type' => !empty($response_data['package_type']) ? $response_data['package_type'] . ' ' . $response_data['category'] : 'Не указан',
                 'status' => !empty($response_data['status']) ? $response_data['status'] : 'Не указан',
-                'send_time' => !empty($response_data['last']['date']) ? date('H:i d-m-Y', strtotime($response_data['last']['date'])) : 'Не укзаана'
+                'send_time' => !empty($response_data['last']['date']) ? date('H:i d-m-Y', strtotime($response_data['last']['date'])) : 'Не указана'
             ];
         }
         return $response_formatted;
