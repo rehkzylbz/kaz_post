@@ -3,7 +3,7 @@
 namespace Kazpost;
 
 /**
- * Description of V2
+ * class for api v2 tracking implementation
  *
  * @author Aleksej/rehkzylbz@yandex.ru
  */
